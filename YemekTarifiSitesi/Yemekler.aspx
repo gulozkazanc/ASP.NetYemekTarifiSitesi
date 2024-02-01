@@ -129,8 +129,12 @@
             </tr>
             <tr>
                 <td class="auto-style11">&nbsp;</td>
+                <td class="auto-style15">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style11">&nbsp;</td>
                 <td class="auto-style15"><strong>
-                    <asp:Button ID="BtnEkle" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" />
+                    <asp:Button ID="BtnEkle0" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" />
                     </strong></td>
             </tr>
             <tr>
