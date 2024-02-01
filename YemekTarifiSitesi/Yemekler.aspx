@@ -45,6 +45,9 @@
         .auto-style14 {
             height: 23px;
         }
+        .auto-style15 {
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -100,22 +103,39 @@
                 <td class="auto-style14"></td>
             </tr>
             <tr>
-                <td class="auto-style11">KATEGORİ AD:</td>
+                <td class="auto-style11">YEMEK AD:</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style11">KATEGORİ İKON:</td>
+                <td class="auto-style11">MALZEMELER:</td>
                 <td>
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:TextBox ID="TextBox2" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">YEMEK TARİFİ:</td>
+                <td>
+                    <asp:TextBox ID="TextBox3" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">KATEGORİ:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="300px">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style11">&nbsp;</td>
-                <td><strong>
-                    <asp:Button ID="BtnEkle" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" />
+                <td class="auto-style15"><strong>
+                    <asp:Button ID="BtnEkle0" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" />
                     </strong></td>
+            </tr>
+            <tr>
+                <td class="auto-style11">&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
         </table>
     </asp:Panel>
