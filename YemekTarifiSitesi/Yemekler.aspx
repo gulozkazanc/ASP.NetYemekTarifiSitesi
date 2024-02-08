@@ -76,7 +76,7 @@
                            <a href="Kategoriler.aspx?KategoriId=<%#Eval("KategoriId")%>&islem=sil">  <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/ikonlar/delete.png" Width="30px" /></a>
                         </td>
                         <td class="auto-style4">
-                        <a href="KategoriDuzenle.aspx?KategoriId=<%#Eval("KategoriId")%>"><asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/update.png" Width="30px" /></a>
+                        <a href="YemekDuzenle.aspx?YemekId=<%#Eval("YemekId")%>"><asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/update.png" Width="30px" /></a>
                         </td>
                     </tr>
                 </table>
@@ -105,19 +105,19 @@
             <tr>
                 <td class="auto-style11">YEMEK AD:</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" runat="server" Width="290px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style11">MALZEMELER:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" Height="138px" TextMode="MultiLine" Width="292px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style11">YEMEK TARİFİ:</td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server" Height="200px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" Height="175px" TextMode="MultiLine" Width="293px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -134,7 +134,7 @@
             <tr>
                 <td class="auto-style11">&nbsp;</td>
                 <td class="auto-style15"><strong>
-                    <asp:Button ID="BtnEkle0" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" />
+                    <asp:Button ID="BtnEkle0" runat="server" CssClass="auto-style12" Text="Ekle" Width="100px" OnClick="BtnEkle0_Click" />
                     </strong></td>
             </tr>
             <tr>
