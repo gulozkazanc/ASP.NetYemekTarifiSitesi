@@ -8,6 +8,9 @@ using System.Data.SqlClient;
 public partial class Yemekler : System.Web.UI.Page
 {
     SqlSinif bgl = new SqlSinif();
+    string islem = "";
+    string id = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         Panel2.Visible = false;
@@ -15,7 +18,9 @@ public partial class Yemekler : System.Web.UI.Page
 
         if (Page.IsPostBack == false)
         {
-
+            id = Request.QueryString["YemekId"];
+            islem = Request.QueryString["islem"];
+            //Kategori Listesi
             SqlCommand komut2 = new SqlCommand("select * from Tbl_Kategoriler", bgl.baglanti());
             SqlDataReader dr2 = komut2.ExecuteReader();
             DropDownList1.DataTextField = "KategoriAd";
@@ -33,7 +38,13 @@ public partial class Yemekler : System.Web.UI.Page
         DataList1.DataSource = dr;
         DataList1.DataBind();
 
-        //Kategori Listesi
+        if (islem == "sil")
+        {
+            SqlCommand komut2 = new SqlCommand("delete from Tbl_Yemekler where YemekId=@p1",bgl.baglanti());
+            komut2.Parameters.AddWithValue("@p1",id);
+            komut2.ExecuteNonQuery();
+            bgl.baglanti().Close();
+        }
         
 
     }
@@ -61,6 +72,7 @@ public partial class Yemekler : System.Web.UI.Page
 
     protected void BtnEkle0_Click(object sender, EventArgs e)
     {
+        //Yemek Ekleme
         SqlCommand komut = new SqlCommand("insert into Tbl_Yemekler (YemekAd,YemekMalzeme,YemekTarif,Kategoriid) values (@p1,@p2,@p3,@p4)", bgl.baglanti());
         komut.Parameters.AddWithValue("@p1", TextBox1.Text);
         komut.Parameters.AddWithValue("@p2", TextBox2.Text);
@@ -68,5 +80,12 @@ public partial class Yemekler : System.Web.UI.Page
         komut.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
         komut.ExecuteNonQuery();
         bgl.baglanti().Close();
+
+        //Kategori sayısını artırma
+        SqlCommand komut2 = new SqlCommand("update Tbl_Kategoriler set KategoriAdet=KategoriAdet+1 where KategoriId=@p1",bgl.baglanti());
+        komut2.Parameters.AddWithValue("@p1",DropDownList1.SelectedValue);
+        komut2.ExecuteNonQuery();
+        bgl.baglanti().Close();
+
     }
 }

@@ -22,6 +22,7 @@ public partial class YemekDuzenle : System.Web.UI.Page
                 TextBox1.Text = dr[1].ToString();
                 TextBox2.Text = dr[2].ToString();
                 TextBox3.Text = dr[3].ToString();
+                DropDownList1.Text = dr[7].ToString();
             }
             bgl.baglanti().Close();
 

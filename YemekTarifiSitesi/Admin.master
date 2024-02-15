@@ -39,10 +39,10 @@
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Yemekler.aspx">YEMEKLER</a></td>
                         </tr>
                         <tr>
-                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">YORUMLAR</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Yorumlar.aspx">YORUMLAR</a></td>
                         </tr>
                         <tr>
-                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">MESAJLAR</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Mesajlar.aspx">MESAJLAR</a></td>
                         </tr>
                         <tr>
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">GÜNÜN YEMEĞİ</td>
