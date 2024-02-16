@@ -44,11 +44,17 @@ public partial class YemekDuzenle : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlCommand komut = new SqlCommand("update Tbl_Yemekler set yemekad=@p1,yemekmalzeme=@p2,yemektarif=@p3,kategoriid=@p4 where yemekId=@p5",bgl.baglanti());
+        //Resmin yolunu kaydetme
+        FileUpload1.SaveAs(Server.MapPath("/resimler/"+FileUpload1.FileName));
+
+
+
+        SqlCommand komut = new SqlCommand("update Tbl_Yemekler set yemekad=@p1,yemekmalzeme=@p2,yemektarif=@p3,kategoriid=@p4,YemekResim=@p6 where yemekId=@p5",bgl.baglanti());
         komut.Parameters.AddWithValue("@p1",TextBox1.Text);
         komut.Parameters.AddWithValue("@p2", TextBox2.Text);
         komut.Parameters.AddWithValue("@p3", TextBox3.Text);
         komut.Parameters.AddWithValue("@p4", DropDownList1.SelectedValue);
+        komut.Parameters.AddWithValue("@p6","~/resimler/"+FileUpload1.FileName);
         komut.Parameters.AddWithValue("@p5",id);
         komut.ExecuteNonQuery();
         bgl.baglanti().Close();

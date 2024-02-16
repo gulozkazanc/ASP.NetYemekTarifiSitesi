@@ -56,6 +56,8 @@ public partial class TarifOnerDetay : System.Web.UI.Page
         komut2.ExecuteNonQuery();
         bgl.baglanti().Close();
 
+        //Hangi kategoriye ekleme yapılıyorsa kategoriadeti 1 artır.
+
 
     }
 }

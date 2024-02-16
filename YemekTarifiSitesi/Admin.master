@@ -51,7 +51,7 @@
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Tarifler.aspx">TARİFLER</a></td>
                         </tr>
                         <tr>
-                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">HAKKIMIZDA</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="HakkimizdaAdmin.aspx">HAKKIMIZDA</a></td>
                         </tr>
                         <tr>
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">&nbsp;</td>
