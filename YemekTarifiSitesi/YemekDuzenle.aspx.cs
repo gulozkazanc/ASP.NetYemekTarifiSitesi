@@ -28,6 +28,7 @@ public partial class YemekDuzenle : System.Web.UI.Page
 
             if (Page.IsPostBack == false)
             {
+                //Kategori Listesi
 
                 SqlCommand komut2 = new SqlCommand("select * from Tbl_Kategoriler", bgl.baglanti());
                 SqlDataReader dr2 = komut2.ExecuteReader();
