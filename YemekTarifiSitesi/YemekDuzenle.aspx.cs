@@ -52,4 +52,19 @@ public partial class YemekDuzenle : System.Web.UI.Page
         komut.ExecuteNonQuery();
         bgl.baglanti().Close();
     }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        //Tüm yemeklerin durumunu false yaptık
+        SqlCommand komut = new SqlCommand("update Tbl_Yemekler set Durum=0",bgl.baglanti());
+        komut.ExecuteNonQuery();
+        bgl.baglanti().Close();
+
+        //günün yemeği için id ye göre durumu true yapalım.
+        SqlCommand komut2 = new SqlCommand("update Tbl_Yemekler set Durum=1 where YemekId=@p1",bgl.baglanti());
+        komut2.Parameters.AddWithValue("@p1",id);
+        komut2.ExecuteNonQuery();
+        bgl.baglanti().Close();
+
+    }
 }

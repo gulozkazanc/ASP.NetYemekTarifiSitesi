@@ -45,10 +45,10 @@
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Mesajlar.aspx">MESAJLAR</a></td>
                         </tr>
                         <tr>
-                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">GÜNÜN YEMEĞİ</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="GununYemegiAdmin.aspx">GÜNÜN YEMEĞİ</a></td>
                         </tr>
                         <tr>
-                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">ÖNERİLER</td>
+                            <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF"><a href="Tarifler.aspx">TARİFLER</a></td>
                         </tr>
                         <tr>
                             <td style="border-top-style: solid; border-top-width: thin; border-color: #FFFFFF">HAKKIMIZDA</td>
